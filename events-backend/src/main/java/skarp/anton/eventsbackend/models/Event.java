@@ -2,9 +2,11 @@ package skarp.anton.eventsbackend.models;
 
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 public class Event
 {
+  private String id = UUID.randomUUID().toString();
   private String name;
   private Date startTime;
   private Date endTime;
@@ -92,5 +94,15 @@ public class Event
   public void setEventParticipantList(List<EventParticipant> eventParticipantList)
   {
     this.eventParticipantList = eventParticipantList;
+  }
+
+  public String getId()
+  {
+    return id;
+  }
+
+  public void setId(String id)
+  {
+    this.id = id;
   }
 }
