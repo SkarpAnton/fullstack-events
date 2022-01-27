@@ -2,7 +2,6 @@ package skarp.anton.eventsbackend.mongo;
 
 import com.mongodb.MongoClient;
 import org.bson.codecs.configuration.CodecRegistry;
-import org.bson.codecs.pojo.ClassModel;
 import org.bson.codecs.pojo.PojoCodecProvider;
 
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
@@ -14,7 +13,7 @@ public class CodecBuilder
   {
 
     PojoCodecProvider pojoCodecProvider = PojoCodecProvider.builder()
-        .register("skarp.anton.eventsbackend.models")
+        .register("skarp.anton.eventsbackend.models.mongo")
         .automatic(true)
         .build();
     CodecRegistry codecRegistry = fromRegistries(MongoClient.getDefaultCodecRegistry(),fromProviders(pojoCodecProvider));

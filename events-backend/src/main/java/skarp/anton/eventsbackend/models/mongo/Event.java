@@ -1,4 +1,4 @@
-package skarp.anton.eventsbackend.models;
+package skarp.anton.eventsbackend.models.mongo;
 
 import java.util.Date;
 import java.util.List;
@@ -11,7 +11,7 @@ public class Event
   private Date startTime;
   private Date endTime;
   private Boolean privateEvent;
-  private Boolean onlyFriends;
+  private Boolean requiresLogin;
   private String address;
   private String description;
   private List<EventParticipant> eventParticipantList;
@@ -56,14 +56,14 @@ public class Event
     this.privateEvent = privateEvent;
   }
 
-  public Boolean getOnlyFriends()
+  public Boolean getRequiresLogin()
   {
-    return onlyFriends;
+    return requiresLogin;
   }
 
-  public void setOnlyFriends(Boolean onlyFriends)
+  public void setRequiresLogin(Boolean requiresLogin)
   {
-    this.onlyFriends = onlyFriends;
+    this.requiresLogin = requiresLogin;
   }
 
   public String getAddress()

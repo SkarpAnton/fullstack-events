@@ -1,4 +1,4 @@
-package skarp.anton.eventsbackend.models;
+package skarp.anton.eventsbackend.models.mongo;
 
 public enum Role
 {

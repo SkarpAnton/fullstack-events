@@ -1,21 +1,13 @@
-package skarp.anton.eventsbackend.models;
+package skarp.anton.eventsbackend.models.mongo;
 
 public class EventParticipant
 {
-  private User user;
+  private String userId;
   private Role role;
   private String inviteLink;
   private String eventUsername;
 
-  public User getUser()
-  {
-    return user;
-  }
 
-  public void setUser(User user)
-  {
-    this.user = user;
-  }
 
   public Role getRole()
   {
@@ -45,5 +37,15 @@ public class EventParticipant
   public void setEventUsername(String eventUsername)
   {
     this.eventUsername = eventUsername;
+  }
+
+  public String getUserId()
+  {
+    return userId;
+  }
+
+  public void setUserId(String userId)
+  {
+    this.userId = userId;
   }
 }
